@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from './components/Box';
+import Box from '../Box';
 import './style/index.css';
 import { data } from '../../data/data';
 
