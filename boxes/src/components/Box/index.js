@@ -1,5 +1,5 @@
 import React from 'react';
-import './Box.css';
+import './style/index.css';
 
 const Box = ({ name, title, age }) => {
   return (

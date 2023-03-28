@@ -1,8 +1,12 @@
 header {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
   background-color: rgb(42, 42, 65);
   color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
 }

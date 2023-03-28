@@ -1,14 +1,17 @@
-main {
-  height: 100%;
+section {
+  height: calc(100vh - 200px);
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(58, 58, 93);
+  margin-top: 100px;
+  scroll-margin-top: 5.5rem;
 }
 
 .cards {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
