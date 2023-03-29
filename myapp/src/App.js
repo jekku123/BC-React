@@ -8,11 +8,11 @@ class App extends React.Component {
     isOk: true,
   };
 
-  incrementCount = () => {
+  incrementOne = () => {
     this.setState({ count: this.state.count + 1 });
   };
 
-  decrementCount = () => {
+  decrementOne = () => {
     if (this.state.count > 0) {
       this.setState({ count: this.state.count - 1 });
     } else {
@@ -23,7 +23,7 @@ class App extends React.Component {
     }
   };
 
-  decrementFiveFromCount = () => {
+  decrementFive = () => {
     if (this.state.count >= 5) {
       this.setState({ count: this.state.count - 5 });
     } else {
@@ -34,7 +34,7 @@ class App extends React.Component {
     }
   };
 
-  incrementFiveToCount = () => {
+  incrementFive = () => {
     this.setState({ count: this.state.count + 5 });
   };
 
@@ -56,11 +56,11 @@ class App extends React.Component {
           {this.state.count}
         </div>
         <div className='buttons'>
-          <Button handler={this.decrementFiveFromCount} title={'Decrement 5'} />
-          <Button handler={this.decrementCount} title={'Decrement 1'} />
+          <Button handler={this.decrementFive} title={'Decrement 5'} />
+          <Button handler={this.decrementOne} title={'Decrement 1'} />
           <Button handler={this.resetCount} title={'Reset'} />
-          <Button handler={this.incrementCount} title={'Increment 1'} />
-          <Button handler={this.incrementFiveToCount} title={'Increment 5'} />
+          <Button handler={this.incrementOne} title={'Increment 1'} />
+          <Button handler={this.incrementFive} title={'Increment 5'} />
         </div>
       </div>
     );
