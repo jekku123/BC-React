@@ -1,55 +1,30 @@
-import React, { useState } from 'react';
 import './App.css';
-
-// class App extends React.Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       count: 0,
-//     };
-//   }
-
-//   incrementCount = () => {
-//     this.setState({ count: this.state.count + 1 });
-//   };
-
-//   decrementCount = () => {
-//     this.setState({ count: this.state.count - 1 });
-//   };
-
-//   render() {
-//     return (
-//       <div className='App'>
-//         <h1>Counter</h1>
-//         <div className='buttons'>
-//           <button onClick={this.incrementCount}>Increment</button>
-//           <button onClick={this.decrementCount}>Decrement</button>
-//         </div>
-//         <p>Count: {this.state.count}</p>
-//       </div>
-//     );
-//   }
-// }
+import React from 'react';
+import Button from './UI/Button';
+import { useReducer } from 'react';
+import { countReducer } from './context/countReducer';
+import { buttonData } from './context/buttonData';
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [count, handleCount] = useReducer(countReducer, 0);
 
-  const incrementCount = () => {
-    setCount((prevCount) => prevCount + 1);
-  };
-
-  const decrementCount = () => {
-    setCount((prevCount) => prevCount - 1);
+  const updateCount = (type) => {
+    handleCount({ type: type });
   };
 
   return (
     <div className='App'>
       <h1>Counter</h1>
+      <div className={`count ${count % 2 === 0 ? 'even' : 'odd'}`}>{count}</div>
       <div className='buttons'>
-        <button onClick={incrementCount}>Increment</button>
-        <button onClick={decrementCount}>Decrement</button>
+        {buttonData.map((button) => (
+          <Button
+            key={button.name}
+            handler={() => updateCount(button.action)}
+            name={button.name}
+          />
+        ))}
       </div>
-      <p>Count: {count}</p>
     </div>
   );
 };

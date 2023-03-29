@@ -1,7 +1,7 @@
 .App {
   font-family: 'Montserrat', sans-serif;
-  color: white;
-  background-color: rgb(39, 39, 52);
+  color: #f6f7f9;
+  background-color: #22272f;
   text-align: center;
   height: 100vh;
   display: flex;
@@ -18,12 +18,34 @@
   flex-direction: row;
 }
 
+.count {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 30px;
+}
+
+.even {
+  background-color: #139eca;
+}
+
+.odd {
+  background-color: rgb(13, 217, 47);
+}
+
 button {
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid black;
   margin: 10px;
   font-family: inherit;
+  background-color: #f6f7f9;
 }
 
 button:hover {
@@ -31,7 +53,7 @@ button:hover {
 }
 
 button:active {
-  background-color: rgb(251, 222, 185);
+  background-color: rgb(249, 207, 153);
 }
 
 @media (prefers-reduced-motion: no-preference) {

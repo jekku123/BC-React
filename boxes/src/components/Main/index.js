@@ -9,7 +9,12 @@ const Main = () => {
       <section>
         <div className='cards'>
           {data.map((user) => (
-            <Box name={user.name} title={user.title} age={user.age} />
+            <Box
+              key={user.id}
+              name={user.name}
+              title={user.title}
+              age={user.age}
+            />
           ))}
         </div>
       </section>

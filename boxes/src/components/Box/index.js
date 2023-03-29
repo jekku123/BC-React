@@ -1,7 +1,7 @@
 import React from 'react';
 import './style/index.css';
 
-const Box = ({ name, title, age }) => {
+const Box = ({ name, title, age, id }) => {
   return (
     <div className='card'>
       <h2>{name}</h2>
