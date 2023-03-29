@@ -1,5 +1,5 @@
-const Button = ({ name, handler }) => {
-  return <button onClick={handler}>{name}</button>;
+const Button = ({ title, handler }) => {
+  return <button onClick={handler}>{title}</button>;
 };
 
 export default Button;

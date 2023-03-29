@@ -1,22 +1,22 @@
 export const buttonData = [
   {
-    name: '-5',
+    title: '-5',
     action: 'substractFive',
   },
   {
-    name: '-1',
+    title: '-1',
     action: 'substractOne',
   },
   {
-    name: 'Reset',
+    title: 'Reset',
     action: 'reset',
   },
   {
-    name: '+1',
+    title: '+1',
     action: 'addOne',
   },
   {
-    name: '+5',
+    title: '+5',
     action: 'addFive',
   },
 ];

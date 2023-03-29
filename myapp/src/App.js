@@ -8,20 +8,23 @@ import { buttonData } from './context/buttonData';
 const App = () => {
   const [count, handleCount] = useReducer(countReducer, 0);
 
-  const updateCount = (type) => {
-    handleCount({ type: type });
-  };
-
   return (
     <div className='App'>
       <h1>Counter</h1>
-      <div className={`count ${count % 2 === 0 ? 'even' : 'odd'}`}>{count}</div>
+      <div
+        className={`${
+          (count === 0 && `count`) ||
+          (count % 2 === 0 ? 'count even' : 'count odd')
+        }`}
+      >
+        {count}
+      </div>
       <div className='buttons'>
         {buttonData.map((button) => (
           <Button
-            key={button.name}
-            handler={() => updateCount(button.action)}
-            name={button.name}
+            key={button.title}
+            handler={() => handleCount({ type: button.action })}
+            title={button.title}
           />
         ))}
       </div>
